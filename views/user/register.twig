@@ -1,0 +1,36 @@
+{% extends "layouts/app.twig" %}
+
+
+	{% block title %}
+		Registreren
+	{% endblock %}
+	
+	{% block body %}
+		<div class="d-flex justify-content-center">
+			<div class="col-12 col-lg-6 mt-5">
+				<div class="card rounded p-4 shadow-sm border border-0">
+					<form id="loginForm">
+						<div class="d-flex text-white justify-content-between">
+							<h1 class="mb-4">Registreren</h1>
+							<h1 style="top: 7px;" class="position-relative fa-solid fa-right-to-bracket"></h1>
+						</div>
+						<div class="input-group">
+							<input id="username" type="text" name="username" class="form-control shadow-none rounded" placeholder="Gebruikersnaam"/>
+						</div>
+						<div class="input-group mt-3">
+							<input id="password" type="password" name="password" class="form-control shadow-none rounded" placeholder="Wachtwoord"/>
+						</div>
+						<div class="input-group mt-3">
+							<input id="confirm_password" type="password" name="confirm_password" class="form-control shadow-none rounded" placeholder="Herhaal wachtwoord"/>
+						</div>
+						<button type="submit" class="btn btn-primary w-100 mt-3">Creeër je account</button>
+					</form>
+					<hr>
+					<p class="text-muted">Al een account?
+						<a href="/login">Log in</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="assets/js/register.js"></script>
+	{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layouts/app.twig" %}
+
+
+{% block title %}
+	Log in
+{% endblock %}
+
+{% block body %}
+	<div class="d-flex justify-content-center">
+		<div class="col-12 col-lg-6 mt-5">
+			<div class="card rounded p-4 shadow-sm border border-0">
+				<form id="loginForm">
+					<div class="d-flex text-white justify-content-between">
+						<h1 class="mb-4">Log in</h1>
+						<h1 style="top: 7px;" class="position-relative fa-solid fa-right-to-bracket"></h1>
+					</div>
+					<div class="input-group">
+						<input id="username" type="text" name="username" class="form-control shadow-none rounded" placeholder="Gebruikersnaam"/>
+					</div>
+					<div class="input-group mt-3">
+						<input id="password" type="password" name="password" class="form-control shadow-none rounded" placeholder="Wachtwoord"/>
+					</div>
+					<button type="submit" class="btn btn-primary w-100 mt-3">Inloggen</button>
+				</form>
+				<hr>
+				<p class="text-muted">Nog geen account?
+					<a href="./register">Registreer</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/login.js"></script>
+{% endblock %}

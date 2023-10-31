@@ -1,0 +1,14 @@
+RewriteEngine on
+
+# Handle 404 errors
+ErrorDocument 404 /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^login$ public/index.php?controller=User&method=login [L,NC,QSA]
+RewriteRule ^register$ public/index.php?controller=User&method=register [L,NC,QSA]
+RewriteRule ^logout$ public/index.php?controller=User&method=logout [L,NC,QSA]
+RewriteRule ^school$ public/index.php?controller=School&method=index [L,NC,QSA]
+RewriteRule ^$ public/index.php?controller=Home&method=index [L,NC,QSA]
+RewriteRule ^contact$ public/index.php?controller=Home&method=contact [L,NC,QSA]
+RewriteRule ^projects$ public/index.php?controller=Home&method=projects [L,NC,QSA]

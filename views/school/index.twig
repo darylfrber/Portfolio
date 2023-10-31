@@ -1,0 +1,59 @@
+{% extends "layouts/app.twig" %}
+
+
+{% block title %}
+	School
+{% endblock %}
+
+{% block body %}
+	<div class="row">
+        <div class="col-12 col-lg-6">
+            <h3 class="text-active">Laatste activiteiten</h3>
+			<div class="list list-row card" id="sortable" data-sortable-id="0" aria-dropeffect="move">
+			{% for data in projectData %}
+				{% set eventDateTime = data.event.created_at|date("Y-m-d H:i:s") %}
+				{% set currentDateTime = "now"|date("Y-m-d H:i:s") %}
+				{% set eventTime = date(eventDateTime) %}
+				{% set currentTime = date(currentDateTime) %}
+				{% set timeDiff = currentTime.diff(eventTime) %}
+				{% set formattedTimeDiff = "" %}
+
+				{% if timeDiff.years %}
+					{% set formattedTimeDiff = timeDiff.years ~ " jaar" ~ (timeDiff.years > 1 ? "s" : "") ~ " geleden" %}
+				{% elseif timeDiff.months %}
+					{% set formattedTimeDiff = timeDiff.months ~ " maand" ~ (timeDiff.months > 1 ? "s" : "") ~ " geleden" %}
+				{% elseif timeDiff.days %}
+					{% set formattedTimeDiff = timeDiff.days ~ " dag" ~ (timeDiff.days > 1 ? "en" : "") ~ " geleden" %}
+				{% elseif timeDiff.h %}
+					{% set formattedTimeDiff = timeDiff.h ~ " uur" ~ (timeDiff.h > 1 ? "" : "") ~ " geleden" %}
+				{% elseif timeDiff.i %}
+					{% set formattedTimeDiff = timeDiff.i ~ " minuten" ~ (timeDiff.i > 1 ? "" : "") ~ " geleden" %}
+				{% else %}
+					{% set formattedTimeDiff = "Zojuist" %}
+				{% endif %}
+
+                <div class="list-item" data-id="13" data-item-sortable-id="0" draggable="true" role="option" aria-grabbed="false" style="">
+					<div>
+						<a href="#" data-abc="true">
+							<span class="w-40 avatar"><img src="{{ data.event.author.avatar_url }}" alt="."></span>
+						</a>
+					</div>
+					<div class="flex">
+						<a href="{{ data.project.web_url }}" class="item-author text-color text-hover no-a-styling" data-abc="true">{{ data.project.name_with_namespace }}</a>
+						<div class="item-except text-muted text-sm h-1x">{{ data.event.push_data.commit_title }}</div>
+					</div>
+					<div class="no-wrap">
+						<div class="item-date text-muted text-sm d-none d-md-block">{{ formattedTimeDiff }}</div>
+					</div>
+				</div>
+			{% endfor %}
+            </div>
+		</div>
+        <div class="col-12 col-lg-6">
+			<h3 class="text-active">Schoolverkenner</h3>
+			<div class="list list-row card text-color" id="sortable" data-sortable-id="0" aria-dropeffect="move">
+				<div id="folderStructure"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -49,7 +49,7 @@ class SchoolController extends BaseController
     public function files(): void
     {
         $folder = $_GET['folder'] ?? ''; // Haal de waarde van de optionele folder parameter op
-        $folderPath = realpath(__DIR__ . DIRECTORY_SEPARATOR . '../../../..') . DIRECTORY_SEPARATOR . $folder;
+        $folderPath = realpath(__DIR__ . DIRECTORY_SEPARATOR . '../../..') . DIRECTORY_SEPARATOR . $folder;
         $folders = [];
         $files = [];
 

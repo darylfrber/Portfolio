@@ -1,33 +1,3 @@
-const instagramIcon = document.getElementById("instagram");
-
-instagramIcon.addEventListener("mouseenter", function () {
-    instagramIcon.classList.add("fa-beat");
-});
-
-instagramIcon.addEventListener("mouseleave", function () {
-    instagramIcon.classList.remove("fa-beat");
-});
-
-const githubIcon = document.getElementById("github");
-
-githubIcon.addEventListener("mouseenter", function () {
-    githubIcon.classList.add("fa-beat");
-});
-
-githubIcon.addEventListener("mouseleave", function () {
-    githubIcon.classList.remove("fa-beat");
-});
-
-const twitterIcon = document.getElementById("twitter");
-
-twitterIcon.addEventListener("mouseenter", function () {
-    twitterIcon.classList.add("fa-beat");
-});
-
-twitterIcon.addEventListener("mouseleave", function () {
-    twitterIcon.classList.remove("fa-beat");
-});
-
 // Haal de mappenstructuur op met behulp van Fetch API
 const folderStructure = document.getElementById('folderStructure');
 

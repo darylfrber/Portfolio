@@ -7,7 +7,7 @@ class SchoolController extends BaseController
         $this->notLoggedIn();
 
         $apiToken = $_ENV['BITLAB_API_KEY'];
-        $gitlabUrl = 'https://bitlab.bit-academy.nl';
+        $gitlabUrl = 'https://git.nexed.com';
         $userId = 'darylfrber'; // Gebruiker waar je informatie van wilt ophalen
 
         // Haal de laatste activiteiten op van gebruiker

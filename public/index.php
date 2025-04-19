@@ -6,7 +6,7 @@ require_once '../vendor/autoload.php';
 $controllers = [
     'Home' => 'HomeController',
     'User' => 'UserController',
-    'School' => 'SchoolController',
+    // 'School' => 'SchoolController',
 ];
 
 // Bekijk of er een controller is meegegeven in de URL parameters

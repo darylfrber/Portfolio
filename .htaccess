@@ -1,14 +1,22 @@
-RewriteEngine on
+RewriteEngine On
 
-# Handle 404 errors
-ErrorDocument 404 /
+# Rewrite voor login
+RewriteRule ^login$ /public/index.php?controller=User&method=login [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^login$ public/index.php?controller=User&method=login [L,NC,QSA]
-RewriteRule ^register$ public/index.php?controller=User&method=register [L,NC,QSA]
-RewriteRule ^logout$ public/index.php?controller=User&method=logout [L,NC,QSA]
-RewriteRule ^school$ public/index.php?controller=School&method=index [L,NC,QSA]
-RewriteRule ^$ public/index.php?controller=Home&method=index [L,NC,QSA]
-RewriteRule ^contact$ public/index.php?controller=Home&method=contact [L,NC,QSA]
-RewriteRule ^projects$ public/index.php?controller=Home&method=projects [L,NC,QSA]
+# Rewrite voor register
+RewriteRule ^register$ /public/index.php?controller=User&method=register [L]
+
+# Rewrite voor logout
+RewriteRule ^logout$ /public/index.php?controller=User&method=logout [L]
+
+# Rewrite voor school
+RewriteRule ^school$ /public/index.php?controller=School&method=index [L]
+
+# Rewrite voor home (root)
+RewriteRule ^$ /public/index.php?controller=Home&method=index [L]
+
+# Rewrite voor contact
+RewriteRule ^contact$ /public/index.php?controller=Home&method=contact [L]
+
+# Rewrite voor projects
+RewriteRule ^projects$ /public/index.php?controller=Home&method=projects [L]

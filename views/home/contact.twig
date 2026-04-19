@@ -7,9 +7,9 @@
 
 {% block body %}
 	<section class="mb-8 panel p-6 sm:p-8">
-		<div class="flex flex-col gap-6 sm:flex-row sm:items-center">
-			<img src="./assets/images/me.png" alt="Foto van Daryl Färber" class="h-28 w-28 rounded-2xl border border-slate-700 object-cover">
-			<div>
+		<div class="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:text-left">
+			<img src="./assets/images/me.png" alt="Foto van Daryl Färber" class="h-28 w-28 shrink-0 rounded-2xl border border-slate-700 object-cover">
+			<div class="min-w-0">
 				<h2 class="text-2xl font-semibold text-white">Contact & samenwerken</h2>
 				<p class="mt-2 text-slate-300">Leuk dat je hier bent. Als je een vraag hebt, wil samenwerken of gewoon even wilt sparren over een idee, stuur gerust een bericht.</p>
 				<p class="mt-3 text-sm text-slate-400">Purmerend, Noord-Holland, Nederland</p>
@@ -18,10 +18,10 @@
 	</section>
 
 	<section class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-		<a href="mailto:darylfarber@gmail.com" class="contact-card">
+		<a href="mailto:darylfarber@gmail.com" class="contact-card min-h-[52px] break-words">
 			<i class="fa-solid fa-envelope text-xl text-cyan-300"></i>
 			<h3 class="mt-3 font-semibold text-white">E-mail</h3>
-			<p class="mt-1 text-sm text-slate-300">darylfarber@gmail.com</p>
+			<p class="mt-1 break-all text-sm text-slate-300">darylfarber@gmail.com</p>
 		</a>
 
 		<a href="tel:+31653917126" class="contact-card">
@@ -30,16 +30,16 @@
 			<p class="mt-1 text-sm text-slate-300">+31 6 53917126</p>
 		</a>
 
-		<a href="https://github.com/darylfrber" target="_blank" rel="noreferrer" class="contact-card">
+		<a href="https://github.com/darylfrber" target="_blank" rel="noreferrer" class="contact-card min-h-[52px] break-words">
 			<i class="fa-brands fa-github text-xl text-cyan-300"></i>
 			<h3 class="mt-3 font-semibold text-white">GitHub</h3>
-			<p class="mt-1 text-sm text-slate-300">github.com/darylfrber</p>
+			<p class="mt-1 break-all text-sm text-slate-300">github.com/darylfrber</p>
 		</a>
 
-		<a href="https://www.linkedin.com/in/daryl-farber" target="_blank" rel="noreferrer" class="contact-card">
+		<a href="https://www.linkedin.com/in/daryl-farber" target="_blank" rel="noreferrer" class="contact-card min-h-[52px] break-words">
 			<i class="fa-brands fa-linkedin text-xl text-cyan-300"></i>
 			<h3 class="mt-3 font-semibold text-white">LinkedIn</h3>
-			<p class="mt-1 text-sm text-slate-300">linkedin.com/in/daryl-farber</p>
+			<p class="mt-1 break-all text-sm text-slate-300">linkedin.com/in/daryl-farber</p>
 		</a>
 	</section>
 
@@ -48,7 +48,7 @@
 		<p class="mt-2 text-slate-300">
 			Hier deel ik projecten, experimenten en updates van waar ik op dat moment mee bezig ben. Zo krijg je een eerlijk beeld van mijn groei als developer.
 		</p>
-		<a href="https://github.com/darylfrber" target="_blank" rel="noreferrer" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-4 py-2 font-medium text-slate-950 transition hover:bg-cyan-400">
+		<a href="https://github.com/darylfrber" target="_blank" rel="noreferrer" class="mt-4 inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 px-4 py-2.5 font-medium text-slate-950 transition hover:bg-cyan-400 sm:w-auto">
 			<i class="fa-brands fa-github"></i>
 			Open mijn GitHub
 		</a>

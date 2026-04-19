@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const password = document.getElementById('password').value;
     const confirm_password = document.getElementById('confirm_password').value;
 
-    fetch('/public/index.php?controller=User&method=registerPost', {
+    fetch('/index.php?controller=User&method=registerPost', {
         method: 'POST',
         body: JSON.stringify({ username: username, password: password, confirm_password: confirm_password }),
         headers: {

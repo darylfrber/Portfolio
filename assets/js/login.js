@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('/public/index.php?controller=User&method=loginPost', {
+    fetch('/index.php?controller=User&method=loginPost', {
         method: 'POST',
         body: JSON.stringify({ username: username, password: password }),
         headers: {

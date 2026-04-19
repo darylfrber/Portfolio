@@ -2,31 +2,31 @@
 
 session_start();
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+//
+// $host = $_ENV['DATABASE_HOST'];
+// $db   = $_ENV['DATABASE_NAME'];
+// $user = $_ENV['DATABASE_USER'];
+// $pass = $_ENV['DATABASE_PASS'];
+//
+// $dsn = "mysql:host=$host;dbname=$db";
+// use RedBeanPHP\R as R;
+// R::setup(
+//     $dsn,
+//     $user,
+//     $pass
+// );
 
-$host = $_ENV['DATABASE_HOST'];
-$db   = $_ENV['DATABASE_NAME'];
-$user = $_ENV['DATABASE_USER'];
-$pass = $_ENV['DATABASE_PASS'];
-
-$dsn = "mysql:host=$host;dbname=$db";
-use RedBeanPHP\R as R;
-R::setup(
-    $dsn,
-    $user,
-    $pass
-);
-
-require_once 'controllers/BaseController.php';
-require_once 'controllers/SchoolController.php';
-require_once 'controllers/UserController.php';
-require_once 'controllers/HomeController.php';
+require_once __DIR__ . '/controllers/BaseController.php';
+require_once __DIR__ . '/controllers/SchoolController.php';
+require_once __DIR__ . '/controllers/UserController.php';
+require_once __DIR__ . '/controllers/HomeController.php';
 function render($template, $data)
 {
-    $loader = new \Twig\Loader\FilesystemLoader('../views');
+    $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/views');
     $twig = new \Twig\Environment($loader);
-        
+
     if (isset($_SESSION['user_id'])) { // Als een gebruiker is ingelogd, geef de template user info
         $beans = R::find('user', ' id = ? ', [$_SESSION['user_id']]);
         foreach ($beans as $bean) {

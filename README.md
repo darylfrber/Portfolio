@@ -34,6 +34,8 @@ DATABASE_PASS="uw_database_wachtwoord_hier"
 
 6. Zorg dat de database instellingen correct staan en dat de database is aangemaakt.
 7. U hoeft geen database te importeren; deze wordt automatisch aangemaakt via de applicatie!
+8. Start lokaal met:
+   - `php -S 127.0.0.1:8000 router.php`
 
 ## Technologieën
 

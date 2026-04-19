@@ -1,12 +1,12 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 // Defineer welke Controllers er zijn
 $controllers = [
     'Home' => 'HomeController',
     'User' => 'UserController',
-    // 'School' => 'SchoolController',
+    'School' => 'SchoolController',
 ];
 
 // Bekijk of er een controller is meegegeven in de URL parameters
